@@ -5,15 +5,28 @@
 .SH NAME
 airoverride \- manual override tool for disabling autopilot on certain models of the LibrePlane
 .SH SYNOPSIS
-airoverride [COMMAND]
+.B airoverride
+[COMMAND]
 .SH DESCRIPTION
-airoverride proves low-level access to the LibrePlane control panel to prevent total destruction when the autopilot code breaks. airoverride is optionally integrated with the git issue tracker to file a bug report on the autopilot to help debug the LibrePlane. If you choose to file a bug reeport, please provide enough information to ensure the crash is reproducable.
+airoverride proves low-level access to the LibrePlane control panel to prevent total destruction when the autopilot code breaks. airoverride is optionally integrated with the git issue tracker to file a bug report on the autopilot to help debug the LibrePlane. If you choose to file a bug report, please provide enough information to ensure the crash is reproducible.
 .SH OPTIONS
 airoverride takes either one or zero arguments. If no arguments are specified, the autopilot is simply disabled. Else, the first argument provides a command to the LibrePilot infrastructure. Currently, the only command's available are:
-disable: disables autopilot
-enable: reenables autopilot
-file: files a bug report interactively with the issue tracker
-selfdestruct: override to use if airoverride fails to disable the autopilot. Self destruct saves a copy of LibrePlane's register value to be debugged for further planes use.
+
+.B airoverride
+.I disable
+: disables autopilot
+
+.B airoverride
+.I enable
+: reenables autopilot
+
+.B airoverride
+.I file
+: files a bug report interactively with the issue tracker
+
+.B airoverride
+.I selfdestruct
+: override to use if airoverride fails to disable the autopilot. Self destruct saves a copy of LibrePlane's register value to be debugged for further planes use.
 .SH SEE ALSO
 openairoverride(8)
 .SH AUTHOR
