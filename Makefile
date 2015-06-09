@@ -1,3 +1,3 @@
 all:
-	install -g 0 -o 0 -m 0644 airoverride.1 /usr/local/man/man8/
-	gzip /usr/local/man/man8/airoverrride.1
+	sudo cp airoverride.8 /usr/share/man/man8/ 
+	sudo gzip /usr/share/man/man8/airoverride.8
